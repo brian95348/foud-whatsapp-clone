@@ -1,0 +1,9 @@
+.top-menu-wrapper {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  width: 95%;
+}
+/* .top-menu * {
+  margin-left: 7px;
+} */

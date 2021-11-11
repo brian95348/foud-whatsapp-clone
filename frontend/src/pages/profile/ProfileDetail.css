@@ -1,0 +1,15 @@
+.profile-detail-wrapper {
+  position: relative;
+}
+.profile-detail-img-div {
+  width: 100%;
+}
+
+.profile-detail-username {
+  position: absolute;
+  top: -1px;
+}
+
+.profile-detail-text-wrap .status * {
+  margin: 0;
+}

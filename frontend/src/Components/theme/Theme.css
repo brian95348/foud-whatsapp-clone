@@ -1,0 +1,18 @@
+.weather {
+  margin: 4px auto;
+  text-align: center;
+}
+.weather * {
+  margin: auto 5px;
+}
+.theme-btns {
+  text-align: center;
+}
+.theme-btns button {
+  background: rgb(70, 69, 69);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: auto 5px;
+  padding: 5px;
+}

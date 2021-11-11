@@ -1,0 +1,71 @@
+.nav {
+  background: rgba(7, 194, 85, 0.788);
+  position: relative;
+}
+.nav * {
+  color: white;
+}
+.nav i {
+  cursor: pointer;
+}
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-header i {
+  width: 50px;
+  display: inline;
+}
+.nav-header span {
+  margin: auto 10px;
+}
+.nav-logo {
+  cursor: pointer;
+}
+.nav-drop-down {
+  display: inline-block;
+  width: 20px;
+  justify-self: flex-end;
+  cursor: pointer;
+  transform: display 2s;
+}
+.nav-links {
+  width: 80%;
+  margin: 20px auto;
+  display: none;
+  /* transition: display 1s;  transition doesnt support display property*/
+  /* use height property instead or opacity */
+}
+.nav-links p {
+  padding: 20px 15px;
+}
+
+.pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pages a {
+  padding: 10px;
+  font-weight: bold;
+}
+.show {
+  display: block;
+}
+.link {
+  text-decoration: none;
+}
+
+.active-dark {
+  border-bottom: 2px solid rgba(7, 194, 85, 0.788);
+  color: rgba(7, 194, 85, 0.788);
+}
+
+.active-light {
+  border-bottom: 2px solid black;
+  color: white;
+}
+
+/* Tablet size */

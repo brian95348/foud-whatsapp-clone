@@ -1,0 +1,10 @@
+.side-menu {
+  position: absolute;
+  z-index: 1;
+  top: 5vh;
+  left: 60vw;
+  width: 40vw;
+}
+.side-menu * {
+  margin-left: 7px;
+}

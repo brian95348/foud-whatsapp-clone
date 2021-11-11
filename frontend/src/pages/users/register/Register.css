@@ -1,0 +1,53 @@
+.outer {
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-form-wrapper {
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  margin: 20px auto;
+  color: black;
+}
+
+.h1 {
+  margin: 20px auto;
+  text-align: center;
+}
+.register-form {
+  width: 90%;
+  margin: 20px auto;
+}
+.register-form-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 10px auto;
+}
+.register-form-item label {
+  justify-self: flex-start;
+}
+.register-button-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+button {
+  background: lightblue;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+.register-input {
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+/* Tablet size */
+@media screen and (min-width: 750px) {
+  .register-form-wrapper {
+    width: 60%;
+  }
+}

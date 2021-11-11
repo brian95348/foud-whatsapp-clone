@@ -1,0 +1,42 @@
+.settings-wrapper {
+  height: 100vh;
+}
+.settings-item,
+.settings-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.settings-header * {
+  margin: 10px;
+}
+.settings-item {
+  margin: 10px auto;
+}
+.settings-item i {
+  margin-left: 30px;
+}
+.settings-item div {
+  margin-left: 15px;
+}
+
+.settings-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.img-div {
+  padding: 15px;
+}
+.settings-profile * {
+  margin-left: 10px;
+}
+.settings-profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
