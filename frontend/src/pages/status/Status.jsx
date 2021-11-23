@@ -5,7 +5,7 @@ import './Status.css'
 
 function Status() {
   const {styles} = useSelector(state => state.global);
-  const {profile, profileError} = useSelector(state => state.profileDetail);
+  const {profile } = useSelector(state => state.profileDetail);
   const {token, profile_username } = useSelector(state => state.userLogin);
   const dispatch = useDispatch();
   const ref = useRef();
@@ -18,7 +18,7 @@ function Status() {
     <section ref={ref} style={styles} className="status-home">
       <div className="status-profile">     
               <div className="img-div">
-                <img src={`/assets/Profiles/${profile.url}`} alt="image-not-found"/>
+                <img src={`/assets/Profiles/${profile.url}`} />
               </div>
               <div className="text-div">
                   <h2>My Status</h2>

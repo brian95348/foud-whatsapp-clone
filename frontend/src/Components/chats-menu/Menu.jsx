@@ -1,5 +1,5 @@
 import React,{useRef,useEffect} from 'react'
-import {Link} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import {toggleSideMenu} from '../../redux/Global/actions'
 import './Menu.css'
@@ -8,6 +8,7 @@ function Menu() {
   const {styles} = useSelector(state => state.global);
   const ref = useRef();
   const dispatch = useDispatch();
+  const history = useHistory();
 
   useEffect(()=>{
     for (let i = 0; i < ref.current.children.length; i++) {
@@ -17,6 +18,7 @@ function Menu() {
 
   const handleClick = () => {
     dispatch(toggleSideMenu())
+    history.push("/settings")
   }
 
   return (
@@ -30,7 +32,7 @@ function Menu() {
       <p>New broadcast</p>
       <p>Linked devices</p>
       <p>Starred devices</p>
-      <Link onClick={handleClick} to="/settings">Settings</Link>
+      <p style={{cursor:'pointer'}} onClick={handleClick}>Settings</p>
     </div>
   )
 }

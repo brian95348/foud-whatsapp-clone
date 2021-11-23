@@ -1,4 +1,4 @@
-import React,{useEffect,useRef, useState} from 'react'
+import React,{useEffect,useRef } from 'react'
 import {Link, useHistory} from 'react-router-dom'
 import {useDispatch, useSelector} from 'react-redux'
 import {fetchProfileDetail} from '../../redux/Profiles/detail/reducer'
@@ -32,7 +32,7 @@ function Settings() {
       <Link to={`/settings/profile/${profile.username}`}>
       <div className="settings-profile">     
               <div className="img-div">
-                <img src={`/assets/Profiles/${profile.url}`} alt="image-not-found"/>
+                <img src={`/assets/Profiles/${profile.url}`} />
               </div>
               <div className="text-div">
                   <h2>{profile.username}</h2>

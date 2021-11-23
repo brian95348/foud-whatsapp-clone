@@ -1,5 +1,3 @@
-
-import axios from 'axios'
 import * as actionCreators from './actions'
 
 const initialState = {

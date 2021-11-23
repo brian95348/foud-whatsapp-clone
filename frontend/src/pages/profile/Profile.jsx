@@ -8,7 +8,7 @@ import './Profile.css'
 function Profile() {
   const {styles} = useSelector(state => state.global);
   const {loading,profile, profileError} = useSelector(state => state.profileDetail);
-  const {isUpdated, updateError} = useSelector(state => state.profileUpdate);
+  const {isUpdated } = useSelector(state => state.profileUpdate);
   const [formProfile, setFormProfile] = useState({})
   const [selectedImage, setSelectedImage] = useState(null)
   const {token} = useSelector(state => state.userLogin);
@@ -88,7 +88,7 @@ useEffect(()=>{
       </div>
       <div ref={ref} style={styles} >
        <div className="photo-div">
-         <img src={selectedImage ? (URL.createObjectURL(selectedImage)): profile ? `/assets/Profiles/${profile.url}`: ''} alt="not"/>
+         <img src={selectedImage ? (URL.createObjectURL(selectedImage)): profile ? `/assets/Profiles/${profile.url}`: ''} />
          <div id="input-file-div">
         <input type="file" name="image"  onChange={handleImageChange}/>
        </div>

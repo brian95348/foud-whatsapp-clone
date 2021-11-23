@@ -1,5 +1,5 @@
 import React, {useEffect,useState,useRef} from 'react'
-import {useHistory, useParams} from 'react-router-dom'
+import {useHistory } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
 import {createProfile} from '../../redux/Profiles/create/reducer'
 import './Create.css'
@@ -8,13 +8,12 @@ function CreateProfile() {
 
   const {token,userId} = useSelector(state => state.userLogin)
   const {styles} = useSelector(state => state.global);
-  const {creating, newProfile, created, createError} = useSelector(state => state.createProfile);
+  const {creating, created, createError} = useSelector(state => state.createProfile);
   const [profile,setProfile] = useState({user_id:userId,username:'',status:'',image:''})
   const defaultURL = '/assets/Profiles/index.jpg'
   const [selectedImage, setSelectedImage] = useState(null)
   const ref = useRef();
   const dispatch = useDispatch();
-  const {username} = useParams() 
   const history = useHistory();
 
   useEffect(()=>{
@@ -37,7 +36,7 @@ function CreateProfile() {
             setSelectedImage(null)
             success()
         }    
-  },[created])
+  },[created,createError])
 
   const handleChange = (e) => {
     const value = e.target.value

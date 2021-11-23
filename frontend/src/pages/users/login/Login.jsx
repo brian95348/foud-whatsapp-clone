@@ -14,7 +14,6 @@ const Login = () => {
     useEffect(()=>{
         if (isloggedIn) {
             setUsername('')
-            // window.location.replace('/')
         }    
         },[isloggedIn,loginError])
 
@@ -28,7 +27,6 @@ const Login = () => {
     }
         
     const handleChange = (e) => {
-        const name = e.target.name
         const value = e.target.value
         setUsername(value)
     }

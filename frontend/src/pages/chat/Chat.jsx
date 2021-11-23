@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState, useContext } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Link, useParams, useHistory, useLocation } from 'react-router-dom'
+import { Link, useParams, useHistory } from 'react-router-dom'
 import {WebSocketContext} from '../../Components/socket/webSocket'
 import { fetchMessages } from '../../redux/Messages/list/reducer'
 import {deleteMessages} from '../../redux/Messages/delete/reducer'
@@ -13,9 +13,9 @@ export const chatContext = React.createContext();
 
 function Chat() {
   const { styles } = useSelector(state => state.global);
-  const { loading, messages, messagesError } = useSelector(state => state.messages);
+  const { messages } = useSelector(state => state.messages);
   const { token, username,profile_username } = useSelector(state => state.userLogin)
-  const {profile, profileError} = useSelector(state => state.profileDetail)
+  const {profile } = useSelector(state => state.profileDetail)
   const {deleted,deleteMessagesError} = useSelector(state => state.deleteMessages)
   const ref = useRef();
   const { profileUsername } = useParams()
@@ -26,7 +26,6 @@ function Chat() {
   const [msgs, setMsgs] = useState([])
   const [icons,setIcons] = useState({microphone:true,send:false,camera:true})
   const history = useHistory();
-  const location = useLocation();
   const ws = useContext(WebSocketContext);
 
   useEffect(()=>{
@@ -98,7 +97,7 @@ function Chat() {
         <div className="profile-info">
           <i onClick={()=>history.push('/')} style={{color:styles.nav.color}} className="far fa-arrow-alt-circle-left"></i>
           <Link to={`/settings/profile/${username}`}>
-          <img src={`/assets/Profiles/${profile.url}`} alt="not" />
+          <img src={`/assets/Profiles/${profile.url}`}  />
           <h2>{profile.username}</h2>
           </Link>
         </div>
@@ -111,7 +110,7 @@ function Chat() {
       <div style={{ color: styles.nav.color }} className="status-div">
         {profile.status}
       </div>
-      {selectedMsgs != 0 && <TopMenu>
+      {selectedMsgs !== 0 && <TopMenu>
           <div className="chat-top-menu">
             <div className="first-span">
               <i onClick={()=>history.push('/')} style={{ color: styles.nav.color }} className="far fa-arrow-alt-circle-left"></i>

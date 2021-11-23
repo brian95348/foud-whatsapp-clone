@@ -11,15 +11,15 @@ const Register = () => {
     })
     const history = useHistory();
     const dispatch = useDispatch();
-    const {isRegistered,isRegistering,newUser,registrationError} = useSelector(state => state.userRegistration)
+    const {isRegistered,isRegistering,registrationError} = useSelector(state => state.userRegistration)
 
-    const userSuccess = (data) => {
+    const userSuccess = () => {
             history.push('/login')
     }
 
     useEffect(()=>{
         if (isRegistered) {
-            userSuccess(newUser)
+            userSuccess()
         }
         if (registrationError) {
             console.log(registrationError)

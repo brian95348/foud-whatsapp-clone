@@ -6,12 +6,4 @@ import rootReducer from './rootReducer'
 
 const middleWare = [thunk]
 
-const cartFromLocalStorage = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
-
-const INITIAL_STATE = {
-    cart: {
-        cartItems: cartFromLocalStorage
-    }
-}
-
-export const store = createStore(rootReducer,INITIAL_STATE,composeWithDevTools(applyMiddleware(...middleWare)))
+export const store = createStore(rootReducer,composeWithDevTools(applyMiddleware(...middleWare)))

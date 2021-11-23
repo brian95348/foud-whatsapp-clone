@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{useEffect } from 'react'
 import {useSelector,useDispatch} from 'react-redux'
 import {useHistory} from 'react-router-dom'
 import Profile from '../../Components/profile/Profile'
@@ -8,7 +8,7 @@ import './Chats.css'
 function Chats() {
   const { styles } = useSelector(state => state.global);
   const {loading, profiles, profilesError} = useSelector(state => state.profiles);
-  const {token,username,userId,profile_username} = useSelector(state => state.userLogin)
+  const {token,username,profile_username} = useSelector(state => state.userLogin)
   const dispatch = useDispatch();
   const history = useHistory();
 

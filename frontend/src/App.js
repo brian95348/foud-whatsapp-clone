@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react'
+import React from 'react'
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
 import Chats from './pages/chats/Chats'
 import ProfileDetail from './pages/profile/ProfileDetail'

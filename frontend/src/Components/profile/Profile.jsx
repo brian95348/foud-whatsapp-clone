@@ -18,7 +18,7 @@ function Profile(props) {
         <Link to={`/chat/${username}`}>
       <div className="chat-profile">     
               <div className="img-div">
-                <img src={`/assets/Profiles/${url}`} alt="not"/>
+                <img src={`/assets/Profiles/${url}`} />
               </div>
               <div className="chat-profile-text-wrapper">
                   <div className="chat-profile-text-div">
