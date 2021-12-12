@@ -15,7 +15,7 @@ const Login = () => {
         if (isloggedIn) {
             setUsername('')
         }    
-        },[isloggedIn,loginError])
+        },[isloggedIn])
 
     useEffect(()=>{
         ref.current.focus()

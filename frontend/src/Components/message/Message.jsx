@@ -29,4 +29,4 @@ function Message({textAlign,id,text,createdAt}) {
   )
 }
 
-export default Message
+export default React.memo(Message)

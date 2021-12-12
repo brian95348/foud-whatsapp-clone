@@ -21,10 +21,10 @@ const Register = () => {
         if (isRegistered) {
             userSuccess()
         }
-        if (registrationError) {
+        else  {
             console.log(registrationError)
         }
-    },[isRegistered,registrationError])
+    },[isRegistered])
 
     const handleSubmit = (e) => {
         e.preventDefault()

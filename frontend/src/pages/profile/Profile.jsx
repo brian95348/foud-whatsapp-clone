@@ -21,11 +21,7 @@ function Profile() {
   const [showBtn, setShowBtn] = useState(false)
 
   useEffect(()=>{
-      console.log(ref);
-      // for (let i = 0; i < ref.current.children.length; i++) {
-      // ref.current.children[i].style = `color:${styles.color}`
-      // }
-      dispatch(fetchProfileDetail(username,token))
+     dispatch(fetchProfileDetail(username,token))
   },[])
 
   useEffect(()=>{

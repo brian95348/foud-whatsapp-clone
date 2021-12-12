@@ -56,7 +56,7 @@ function Chat() {
   useEffect(()=>{
     deleted && updateChatLog()
     deleteMessagesError && console.log(deleteMessagesError);
-  },[deleted,deleteMessagesError])
+  },[deleted])
 
   function updateTopMenu(selected,id,text) {
     selected && setSelectedMsgs(prev=>prev+1)
